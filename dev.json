@@ -16,7 +16,10 @@
         "dnf install --assumeyes git",
         "dnf install --assumeyes unzip",
         "dnf install --assumeyes vim-enhanced",
-        "dnf clean all"
+        "dnf clean all",
+        "curl -LO 'https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip'",
+        "unzip -d /usr/local/bin/ packer_1.2.1_linux_amd64.zip",
+        "rm -f packer_1.2.1_linux_amd64.zip"
       ]
     }
   ]
