@@ -1,8 +1,23 @@
 {
-  "type": "digitalocean",
-  "api_token": "",
-  "image": "ubuntu-14-04-x64",
-  "region": "nyc3",
-  "size": "512mb",
-  "ssh_username": "root"
+  "builders": [
+    {
+      "type": "digitalocean",
+      "image": "fedora-27-x64",
+      "region": "nyc1",
+      "size": "s-1vcpu-1gb",
+      "ssh_username": "root",
+      "snapshot_name": "dev-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline":[
+        "dnf install --assumeyes git",
+        "dnf install --assumeyes unzip",
+        "dnf install --assumeyes vim-enhanced",
+        "dnf clean all"
+      ]
+    }
+  ]
 }
