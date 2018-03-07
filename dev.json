@@ -13,14 +13,44 @@
     {
       "type": "shell",
       "inline":[
+        "dnf upgrade --assumeyes",
+        "dnf install --assumeyes https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-27.noarch.rpm",
+        "dnf install --assumeyes https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-27.noarch.rpm",
+        "dnf install --assumeyes ShellCheck",
+        "dnf install --assumeyes ansible",
+        "dnf install --assumeyes ansible-lint",
+        "dnf install --assumeyes autoconf",
+        "dnf install --assumeyes automake",
+        "dnf install --assumeyes bash-completion",
         "dnf install --assumeyes git",
+        "dnf install --assumeyes gnupg2",
+        "dnf install --assumeyes libffi-devel",
+        "dnf install --assumeyes libtool",
+        "dnf install --assumeyes libxslt-devel",
+        "dnf install --assumeyes libyaml-devel",
+        "dnf install --assumeyes mosh",
+        "dnf install --assumeyes nautilus-dropbox",
+        "dnf install --assumeyes ncurses-devel",
+        "dnf install --assumeyes openssl-devel",
+        "dnf install --assumeyes readline-devel",
+        "dnf install --assumeyes sudo",
+        "dnf install --assumeyes tmux",
+        "dnf install --assumeyes unixODBC-devel",
         "dnf install --assumeyes unzip",
         "dnf install --assumeyes vim-enhanced",
+        "dnf install --assumeyes yamllint",
         "dnf clean all",
-        "curl -LO 'https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip'",
+        "useradd --create-home --home /home/nnutter --shell /bin/bash nnutter",
+        "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter",
+        "curl --location --remote-name 'https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip'",
         "unzip -d /usr/local/bin/ packer_1.2.1_linux_amd64.zip",
-        "rm -f packer_1.2.1_linux_amd64.zip"
+        "rm --force packer_1.2.1_linux_amd64.zip"
       ]
+    },
+    {
+      "type": "file",
+      "source": "init.sh",
+      "destination": "/home/nnutter/init.sh"
     }
   ]
 }
