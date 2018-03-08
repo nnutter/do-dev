@@ -45,15 +45,24 @@
         "rm --force packer_1.2.1_linux_amd64.zip",
         "useradd --create-home --home /home/nnutter --shell /bin/bash nnutter",
         "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter",
-        "sudo -u nnutter mkdir /home/nnutter/.ssh",
-        "cp ~/.ssh/authorized_keys /home/nnutter/.ssh/",
-        "chown nnutter:nnutter /home/nnutter/.ssh/authorized_keys"
+        "sudo -u nnutter mkdir /home/nnutter/.ssh"
       ]
     },
     {
       "type": "file",
       "source": "init.sh",
       "destination": "/home/nnutter/init.sh"
+    },
+    {
+      "type": "file",
+      "source": "authorized_keys",
+      "destination": "/home/nnutter/.ssh/authorized_keys"
+    },
+    {
+      "type": "shell",
+      "inline":[
+        "chown nnutter:nnutter /home/nnutter/.ssh/authorized_keys"
+      ]
     }
   ]
 }
