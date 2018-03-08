@@ -43,25 +43,8 @@
         "curl --location --remote-name 'https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip'",
         "unzip -d /usr/local/bin/ packer_1.2.1_linux_amd64.zip",
         "rm --force packer_1.2.1_linux_amd64.zip",
-        "useradd --create-home --home /home/nnutter --shell /bin/bash nnutter",
-        "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter",
-        "sudo -u nnutter mkdir /home/nnutter/.ssh"
-      ]
-    },
-    {
-      "type": "file",
-      "source": "init.sh",
-      "destination": "/home/nnutter/init.sh"
-    },
-    {
-      "type": "file",
-      "source": "authorized_keys",
-      "destination": "/home/nnutter/.ssh/authorized_keys"
-    },
-    {
-      "type": "shell",
-      "inline":[
-        "chown nnutter:nnutter /home/nnutter/.ssh/authorized_keys"
+        "useradd --home /home/nnutter --shell /bin/bash nnutter",
+        "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter"
       ]
     }
   ]
