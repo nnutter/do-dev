@@ -13,6 +13,7 @@
     {
       "type": "shell",
       "inline":[
+        "echo '/dev/disk/by-id/scsi-0DO_Volume_dev-home  /home                   ext4    defaults,nofail,discard 0 1' >> /etc/fstab",
         "dnf upgrade --assumeyes",
         "dnf install --assumeyes https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-27.noarch.rpm",
         "dnf install --assumeyes https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-27.noarch.rpm",
