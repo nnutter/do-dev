@@ -26,6 +26,7 @@
         "dnf install --assumeyes ddclient",
         "dnf install --assumeyes git",
         "dnf install --assumeyes gnupg2",
+        "dnf install --assumeyes hub",
         "dnf install --assumeyes libffi-devel",
         "dnf install --assumeyes libtool",
         "dnf install --assumeyes libxslt-devel",
