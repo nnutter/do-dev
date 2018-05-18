@@ -11,3 +11,8 @@ git --git-dir ~/.dotfiles.git               remote set-url origin git@github.com
 git config --file ~/.config/git/config transfer.fsckObjects false
 git --git-dir ~/.dotfiles.git --work-tree ~ submodule update --init
 git config --file ~/.config/git/config transfer.fsckObjects true
+
+cat <<EOF
+1. Setup Dropbox.
+2. Import GPG keys.
+EOF
