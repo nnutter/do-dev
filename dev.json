@@ -40,6 +40,7 @@
         "dnf install --assumeyes sqlite-devel",
         "dnf install --assumeyes sudo",
         "dnf install --assumeyes tmux",
+        "dnf install --assumeyes trash-cli",
         "dnf install --assumeyes unixODBC-devel",
         "dnf install --assumeyes unzip",
         "dnf install --assumeyes vim-enhanced",
