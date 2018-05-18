@@ -51,6 +51,9 @@
         "curl --location --remote-name 'https://releases.hashicorp.com/packer/1.2.1/packer_1.2.1_linux_amd64.zip'",
         "unzip -d /usr/local/bin/ packer_1.2.1_linux_amd64.zip",
         "rm --force packer_1.2.1_linux_amd64.zip",
+        "curl --location --remote-name 'https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz'",
+        "tar -C /usr/local -xzf go1.10.2.linux-amd64.tar.gz",
+        "rm go1.10.2.linux-amd64.tar.gz",
         "useradd --home /home/nnutter --shell /bin/bash nnutter",
         "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter"
       ]
