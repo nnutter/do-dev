@@ -55,6 +55,7 @@
         "curl --location --remote-name 'https://dl.google.com/go/go1.10.2.linux-amd64.tar.gz'",
         "tar -C /usr/local -xzf go1.10.2.linux-amd64.tar.gz",
         "rm go1.10.2.linux-amd64.tar.gz",
+        "timedatectl set-timezone America/Chicago",
         "useradd --home /home/nnutter --shell /bin/bash nnutter",
         "echo 'nnutter ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/nnutter"
       ]
