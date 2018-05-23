@@ -36,6 +36,7 @@
         "dnf install --assumeyes ncurses-devel",
         "dnf install --assumeyes openssl-devel",
         "dnf install --assumeyes policycoreutils-python-utils",
+        "dnf install --assumeyes python3-neovim",
         "dnf install --assumeyes readline-devel",
         "dnf install --assumeyes sqlite-devel",
         "dnf install --assumeyes sudo",
